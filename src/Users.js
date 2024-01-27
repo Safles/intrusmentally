@@ -8,7 +8,7 @@ import { IoMdRefreshCircle } from "react-icons/io";
 function Users(){
     const [data, setData] = useState([]);
     const getData = () => {
-        Axios.get("http://localhost:3001/getUserProfile")
+        Axios.get("https://intly-database.onrender.com/getUserProfile")
         .then((response) => {
             console.log(response.data);
             setData(response.data);
