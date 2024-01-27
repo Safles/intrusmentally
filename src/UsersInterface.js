@@ -24,7 +24,7 @@ function UsersInterface(){
     const [license, setLicense] = useState('');
     const [emp_no, setSetEmpNo] = useState('');
     const [errors, setError] = useState([]);
-    const info = {
+    let info = {
         user: username,
         pass: password,
         full_name: full,
@@ -38,9 +38,8 @@ function UsersInterface(){
     const handleSubmit = (event) => {
         console.log("Submitted");
         event.preventDefault();
-        setError()
         Axios.post("https://intly-database.onrender.com/user_register", info)
-        .then(res => console.log(res))
+        .then(res => info = {})
         .catch(err => console.log(err))
     }
 
