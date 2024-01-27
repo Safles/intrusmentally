@@ -39,7 +39,7 @@ function UsersInterface(){
         console.log("Submitted");
         event.preventDefault();
         setError()
-        Axios.post("http://localhost:3001/user_register", info)
+        Axios.post("https://intly-database.onrender.com/user_register", info)
         .then(res => console.log(res))
         .catch(err => console.log(err))
     }
